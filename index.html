@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<title>Palindrome Checker App</title>
+	<style>
+		*{font-size:60px;font-family:Calibri;}
+		body{background:linen;}
+	</style>	
+	</head>
+	<body>	
+		<center>
+			<h1>Palindrome Checker App</h1>
+			<form onsubmit="show()">
+			<input type="text" placeholder="Enter a String" id="str">
+			<br/><br/>
+			<input type="submit" value="Check"/>
+			<h2 id="msg"/>
+			<script>
+				function show()
+					{
+						event.preventDefault();
+						let str=document.getElementById("str");
+						let msg=document.getElementById("msg");
+						
+						if(str.value==="")
+						{
+							alert("u have not enter first string");
+							msg.innerHTML="";		
+							str.focus();
+							return;
+						}
+						
+						
+ 						let s1 = str.value;
+						let ns1 = s1.split("").reverse().join("");
+ 
+
+						if(s1===ns1)
+							msg.innerHTML= "yes";
+						else
+							msg.innerHTML="No";
+
+
+
+					}
+			</script>
+		</center>
+	</body>
+</html>
